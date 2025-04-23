@@ -89,4 +89,10 @@ public class GumballMachine2 implements IGumballMachine{
             }
         }
     }
+
+    @Override
+    public TransitionResult refill(int count) {
+        return state.refill(count);
+    }
+
 }

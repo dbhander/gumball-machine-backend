@@ -10,4 +10,6 @@ public interface IGumballMachine {
 
     TransitionResult dispense();
     void releaseBall();
+    TransitionResult refill(int count);
+    void setCount(int count);
 }

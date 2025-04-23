@@ -32,4 +32,10 @@ public class HasQuarterState implements IState{
         return GumballMachineState.HAS_QUARTER.name();
     }
 
+    @Override
+    public TransitionResult refill(int count) {
+        gumballMachine.setCount(gumballMachine.getCount() + count);
+        return new TransitionResult(true, "Machine refilled", gumballMachine.getTheStateName(), gumballMachine.getCount());
+    }
+
 }
